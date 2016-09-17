@@ -2,6 +2,12 @@ sudo: false
 language: node_js
 node_js:
   - "stable"
-  - "4"
-  - "0.12"
 after_success: npm run coveralls
+env:
+  - secure: "HGkTAntYH2lxGi0yM2V0ForvOuYF9qXIw0WuOG7W0GNagslOTfw0tYVyUdE9sKdZNGR2Vu9fPk3YV06Acq5e9r8gK7Rcwm5mQtYXhB2YASwl8UYVAXq392vyYYMQ6dvXwT88mxxudr+9S7b0Q8dJBX+4F/Z2OiWf4HqocMn6Bxkml9boDIdK9KeIBIHiKBqBCdSTZJNHd93JV5OTxiAkSSj+qxvwDhUeUM9++0kxI+8ufVFEoc4uQ7mhk0ymaBkkvvGwTi3Y5oixhGk6yIkqagIWi4bEINfeVrgSvFqm8a5D5ACY8FzIE2nqZP7k4o7O2ie8yEIFeqSin8iUDQtBgj/8NurK8B8Mm4Aqm8qRogjvCi0wGAYfXd/6Ug7FNScJZ0gmvNzHc9dc4CO/IiAIX6shWQ6BSVTRLSHfKehrGPlGIzGH39gRVmp536VOzK/clLxocIRhlZHeeuDQDoQBWuSkOdoY0Uty23quaQ6M6Psa9hQBcefVvdjbJPOrFv7/rnTFKTBVBmlQ4gzPi1RJcKx5edbRkw+XUgIh4p4aRyFRpdPK26AohYB6nFplAS5h3f4KZYaFegQdMxK5YCMDP5NohIQoRzlFB8skyuLYVz4dpfSsvJpumxPSrYeK4NqOLoWox8m8qA5YWsuO0mGtPfXQAkbaYzQPfS3FvS0pi5M="
+addons:
+  apt:
+    packages:
+      - graphicsmagick
+  sauce_connect:
+    username: "assets"
